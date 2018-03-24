@@ -1,4 +1,4 @@
-package rcb.com.controller;
+package com.rcb.controller;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
