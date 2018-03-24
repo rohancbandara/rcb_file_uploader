@@ -16,7 +16,7 @@ import javax.servlet.http.Part;
 @MultipartConfig(fileSizeThreshold = 1024 * 1024 * 2, // 2MB
 		maxFileSize = 1024 * 1024 * 10, // 10MB
 		maxRequestSize = 1024 * 1024 * 50)
-public class UploadFile extends HttpServlet {
+public class UploadFileServlet extends HttpServlet {
 	private static final String SAVE_DIR = "uploads";
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
@@ -33,17 +33,9 @@ public class UploadFile extends HttpServlet {
 		Part part = request.getPart("file");
 		String fileName = extractFileName(part);
 		System.out.println("zzzzzz");
-		/*
-		 * if you may have more than one files with same name then you can calculate
-		 * some random characters and append that characters in fileName so that it will
-		 * make your each image name identical.
-		 */
+
 		part.write(savePath + File.separator + fileName);
-		/*
-		 * //You need this loop if you submitted more than one file for (Part part :
-		 * request.getParts()) { String fileName = extractFileName(part);
-		 * part.write(savePath + File.separator + fileName); }
-		 */
+
 		// Class.forName("com.mysql.jdbc.Driver");
 		// Connection con =
 		// DriverManager.getConnection("jdbc:mysql://localhost:3306/UploadFile", "root",

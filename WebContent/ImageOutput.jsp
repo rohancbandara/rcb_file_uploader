@@ -1,5 +1,5 @@
 <%@page import="com.sun.scenario.effect.ImageData"%>
-<%@page import="rcb.com.controller.DbConnection"%>
+<%@page import="com.rcb.controller.DbConnection"%>
 <%@page import="java.sql.*" %>
 
 <%@page import="java.io.*" %>

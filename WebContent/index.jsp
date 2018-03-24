@@ -6,7 +6,7 @@
       <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 </head>
 <body>
-    <form action="upload" method="post" enctype="multipart/form-data">
+    <form action="test" method="post" enctype="multipart/form-data">
     <table width="400px" align="center" border=0>
        <tr>
            <td align="center" colspan=2>
