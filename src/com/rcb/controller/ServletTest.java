@@ -34,8 +34,13 @@ public class ServletTest extends HttpServlet {
 		String lastName = request.getParameter("lastname");
 		Part part = request.getPart("file");
 		String fileName = extractFileName(part);
+
 		part.write(savePath + File.separator + fileName);
+		
 		String filePath = savePath + File.separator + fileName;
+		System.out.println("file path =" + filePath);
+		System.out.println("file part =" + part);
+		System.out.println(File.separator);
 
 		FileUpload fu = new FileUpload();
 		fu.saveFile(firstName, lastName, filePath);
@@ -47,7 +52,7 @@ public class ServletTest extends HttpServlet {
 		String[] items = contentDisp.split(";");
 		for (String s : items) {
 			if (s.trim().startsWith("filename")) {
-				return s.substring(s.indexOf("=") + 2, s.length() - 1);
+				return "rcb" + s.substring(s.indexOf("=") + 2, s.length() - 1);
 			}
 		}
 		return "";

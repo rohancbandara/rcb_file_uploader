@@ -4,6 +4,9 @@
 <head>
       <title>Image Upload</title>
       <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+      <script src="js/jquery.min.js" type="text/javascript"></script>
+      <script src="js/javaScript.js" type="text/javascript"></script>
+      
 </head>
 <body>
     <form action="test" method="post" enctype="multipart/form-data">
@@ -25,9 +28,14 @@
            </td>
        </tr>
        <tr>
-           <td>Image Link: </td>
+           <td>Image Link:</td>
            <td>
-               <input type="file" name="file">
+           <img id="blah" src="#" alt="your image" /> 
+               <input type="file" name="file" onchange="readURL(this);" />
+               
+               
+               
+               
            </td>
        </tr>
        <tr>
